@@ -1,38 +1,47 @@
-.App {
+body {
+  background-color: #f4f6f9;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h1, h3 {
   text-align: center;
+  margin-bottom: 1.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn-warning {
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.resaltado {
+  background-color: #fff3cd;
+  font-weight: bold;
+  text-shadow: 0 0 2px #ffc107;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.subrayado-critico {
+  background-color: #f8d7da;
+  font-weight: bold;
+  border-left: 5px solid red;
+  animation: glow 1s infinite alternate;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes glow {
+  0% { box-shadow: 0 0 8px red; }
+  100% { box-shadow: 0 0 20px red; }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.modal-alerta {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background: white;
+  border: 3px solid red;
+  padding: 2rem;
+  box-shadow: 0 0 20px red;
+  font-weight: bold;
+  color: #b30000;
+  text-align: center;
+  border-radius: 8px;
 }
